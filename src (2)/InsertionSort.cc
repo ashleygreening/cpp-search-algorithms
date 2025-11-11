@@ -1,6 +1,6 @@
 #include "myheaders.h"
 
-long InsertionSort(long data[],long size){
-
+void InsertionSort(long data[],long size){
+	return;
 }
 // Your ASort function(s) goes here ..

@@ -12,6 +12,9 @@ void	printarray(long data[], long size);
 int		readfile(string infilename, long data[]);
 int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
-long    InsertionSort(long data[],long size);
+void	bubbleSort(long data[], long size); 			// sortA
+void	mergesort(long data[], long first, long last);	// sortB
+void    InsertionSort(long data[],long size);			// sortC
+
 
 

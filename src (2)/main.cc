@@ -15,90 +15,108 @@
 
 using namespace std;
 
-
 int main() {
-	
 	int		choice, sz;
-	long	data1[MAXSIZE], data2[MAXSIZE];
+	long	data1[MAXSIZE];		// NOTE: I don't know why data2[MAXSIZE] was declared here? The instructions only call for one data array??
 	double  begin_time, end_time, cpu_time_used;
 	string  ifilename, ofilename;
-	
+
 	while (1) {
 
 		printmenu();
 		cin >> choice;
-		
+
 		switch (choice) {
 
 			case 1: // Read input file and store data in arrays data1 and data2
                     // The function 'readfile' returns the size of the file that was read
 					// If the file could not be read, 'readfile' returns -1
-				
+
 					ifilename = "lab5_input.txt";
-					sz = readfile(ifilename, data1, data2);
-			
+					sz = readfile(ifilename, data1);	// NOTE: Changed to only checking data1 as the function can only accept 1 int parameter
+
 					if (sz < 0)	 {
-						 cerr << endl << "ERROR: Input File Not Found or File cannot be opened." <<endl;
-						 cerr << "       Please check that the file exists, its path, and try again!" << endl << endl;
+						 cerr << endl << "ERROR: Input File Not Found or File cannot be opened.\n";
+						 cerr << "Please check that the file exists, its path, and try again!\n";
 						 return 0;
 					}
 					else cout << endl << "File size is: " << sz << endl;
-			
+
 					break;
 
-			case 2: // Bubblesort
+			case 2: // Bubble Sort
 
 					begin_time = clock();   // start cpu timer
-			
+
 					// Call your BubbleSort function here to sort the array data1
-			        //  Note that data1 is of size 'sz' (see case 1).
+					// Note that data1 is of size 'sz' (see case 1).
+					bubbleSort(data1, sz);
 
-
-			
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "BubbleSort ran for " << cpu_time_used << " secs.";
-			
+					cout << endl << "Bubble Sort ran for " << cpu_time_used << " seconds.\n";
+
 					ofilename = "lab5_bubbleout.txt";
 					writefile(data1, sz, ofilename);
-					
+
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
-						 cerr << "       Quiting Now!" << endl << endl;
+						 cerr << "All done :)" << endl << endl;
 						 return 0;
 					}
 					else cout << endl << "Output written to " << ofilename << endl;
-			
+
 					break;
 
 			case 3: // Mergesort
 
 					begin_time = clock();   // start cpu timer
-			
+
 					// Call your MergeSort function here to sort the array data2
-			        //  Note that data2 is of size 'sz' (see case 1).
+			        // Note that data1 is of size 'sz' (see case 1).
 
-
-			
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "MergeSort ran for " << cpu_time_used << " secs.";
-			
+
 					ofilename = "lab5_mergeout.txt";
-					writefile(data2, sz, ofilename);
-					
+					writefile(data1, sz, ofilename);
+
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
-						 cerr << "       Quiting Now!" << endl << endl;
+						 cerr << "Quitting Now!" << endl << endl;
 						 return 0;
 					}
 					else cout << endl << "Output written to " << ofilename << endl;
-			
+
 					break;
-			
-			case 4: // Exit Program
+
+			case 4:		// Insertion Sort
+					begin_time = clock();   // start cpu timer
+
+					// Call your insertion sort function here to sort the array data1
+					//  Note that data1 is of size 'sz' (see case 1).
+
+					end_time = clock();		// end cpu timer
+
+					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
+					cout << endl << "Insertion Sort ran for " << cpu_time_used << " seconds.\n";
+
+					ofilename = "lab5_insertionout.txt";
+					writefile(data1, sz, ofilename);
+
+					if (sz < 0)	 {
+						 cerr << endl << "ERROR: Output File could not be opened.\n" <<endl;
+						 cerr << "Quitting Now!\n" << endl << endl;
+						 return 0;
+					}
+					else cout << endl << "Output written to " << ofilename << endl;
+
+					break;
+
+			case 5: // Exit Program
 
 					cout << endl << "Received program exit command - I QUIT!" << endl << endl;
 
@@ -111,7 +129,7 @@ int main() {
 		} // switch
 
 	} // while
-	
+
 	return 0;
 }
 
