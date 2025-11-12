@@ -14,7 +14,8 @@ int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 void	bubbleSort(long data[], long size); 			// sortA
 void	mergesort(long data[], long first, long last);	// sortB
-void    InsertionSort(long data[],long size);			// sortC
+void    InsertionSort(long data[],long size);
+void    Insert(long data[],long size,long start,long stop);// sortC
 
 
 
