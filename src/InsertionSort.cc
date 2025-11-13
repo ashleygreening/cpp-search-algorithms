@@ -1,4 +1,4 @@
-#include "myheaders.h"
+
 
 
 void insert(long array[],long size,long start,long stop){
@@ -10,8 +10,9 @@ void insert(long array[],long size,long start,long stop){
 
 	array[start]=Needed;
 
-
 }
+
+
 void insertionSort(long array[],long size){
 	for(long i=0;i<size;i++){
 		int j=0;
@@ -20,8 +21,7 @@ void insertionSort(long array[],long size){
 		}
 		insert(array,size,j,i);
 
-		}
-
+	}
 
 
 	return;
