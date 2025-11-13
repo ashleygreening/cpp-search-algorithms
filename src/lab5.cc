@@ -79,7 +79,6 @@ int main() {
 			case 3: // Sort function B
 			
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-			        InsertionSort(data,sz);
 					begin_time = clock();   // start cpu timer
 			
 
