@@ -1,0 +1,15 @@
+//selection sort
+//Author: Ashley Greening
+//Created on 11/13/2025
+
+#include "myheaders.h"
+
+template<class T>
+void selectionsort(T data[], int n) {
+	for (int i = 0,j,least; i < n-1; i++) {
+		for (j = i+1, least = i; j < n; j++)
+			if (data[j] < data[least])
+				least = j;
+		swap(data[least],data[i]);
+	}
+}
