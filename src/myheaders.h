@@ -17,7 +17,7 @@ void	mergesort(long data[], long first, long last);
 void	merge(long d[], long first, long last);// sortB
 void    InsertionSort(long data[],long size);
 void    Insert(long data[],long size,long start,long stop);// sortC
-void    selectionsort(T data[], int n);
+void    selectionSort(T data[], int n); //sortB
 
 
 
