@@ -1,3 +1,10 @@
+//selection sort
+//Author: Ashley Greening
+//Created on 11/18/2025
+
+//sorts the array from smallest element to largest element (ascending order)
+#include "myheaders.h"
+
 template<class T>
 void quicksort(T data[], int n) {
     int i, max;
