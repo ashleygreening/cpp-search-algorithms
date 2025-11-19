@@ -1,7 +1,7 @@
 
 
 
-void insert(long array[],long size,long start,long stop){
+void Insert(long array[],long size,long start,long stop){
 	long Needed=array[stop];
 
 	for(int i=stop;i>=start;--i){
@@ -13,13 +13,13 @@ void insert(long array[],long size,long start,long stop){
 }
 
 
-void insertionSort(long array[],long size){
+void InsertionSort(long array[],long size){
 	for(long i=0;i<size;i++){
 		int j=0;
 		while(array[j]<array[i]){
 			j++;
 		}
-		insert(array,size,j,i);
+		Insert(array,size,j,i);
 
 	}
 
