@@ -1,7 +1,7 @@
 
 #include<iostream>
 #include "myheaders.h"
-
+using namespace std;
 
 void Insert(long array[],int size,int start,int stop){
 	long Needed=array[stop];
