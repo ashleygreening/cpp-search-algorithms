@@ -16,8 +16,9 @@ void	bubbleSort(long data[], long size);
 void    countingSort(long data[],long size);
 void	mergesort(long data[], long first, long last);
 void	merge(long d[], long first, long last);
-void    InsertionSort(long data[],long size);
-void    Insert(long data[],long size,long start,long stop);
+void    InsertionSort(long data[],int size);
+void    Insert(long array[],int size,int start,int stop);
+void    ShellSort(long array[],int size);
 
 template <class T>
 void    selectionSort(T data[], int n);

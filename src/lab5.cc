@@ -18,7 +18,7 @@ using namespace std;
 
 int main() {
 	
-	int		choice, sz;
+	int		choice,sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
 	string  ifilename, ofilename;
@@ -114,7 +114,9 @@ int main() {
 					for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
+					cout << "list copied" << endl;
 					begin_time = clock();   // start cpu timer
+					InsertionSort(wData,sz);
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
@@ -125,9 +127,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Insertion Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_insertion_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -155,9 +157,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "(D)Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_D_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -185,9 +187,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "(E)Sort ran for " << cpu_time_used << " secs.";
 			
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_E_out.txt";
 					writefile(wData, sz, ofilename);
 					
 					if (sz < 0)	 {
@@ -205,6 +207,8 @@ int main() {
 						wData[i] = data[i];
 					}
 					begin_time = clock();   // start cpu timer
+					ShellSort(wData,sz);
+
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
@@ -215,9 +219,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Shell Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_ShellSort_out.txt";
 					writefile(wData, sz, ofilename);
 					
 					if (sz < 0)	 {
