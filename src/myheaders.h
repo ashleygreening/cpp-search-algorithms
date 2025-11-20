@@ -26,6 +26,9 @@ template<class T>
 void	bubbleSort(T data[], long size);
 
 template<class T>
+void	countingSort(T data[], long size);
+
+template<class T>
 void quicksort(T data[], int n);
 
 

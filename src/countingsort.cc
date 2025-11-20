@@ -7,7 +7,9 @@
 
 #include "myheaders.h"
 
-void countingSort(long data[], const long n) {
+
+template<class T>
+void countingSort(T data[], const long n) {
 	long i;
 	long largest = data[0];
 	long *tmp = new long[n];
@@ -34,4 +36,6 @@ void countingSort(long data[], const long n) {
 
 	for (i = 0; i < n; i++) // transfer numbers from tmp[]
 		data[i] = tmp[i]; // to the original array;
+
+	return;
 }
