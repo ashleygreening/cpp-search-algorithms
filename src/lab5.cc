@@ -34,7 +34,7 @@ int main() {
 				
 				ifilename = "lab5_input.txt";
 				sz = readfile(ifilename, data);
-				sz = sz/2; // Divide size n by 2
+				//sz = sz/2; // Divide size n by 2
 
 				if (sz < 0)	 {
 					 cerr << endl << "ERROR: Input File Not Found or File cannot be opened." <<endl;

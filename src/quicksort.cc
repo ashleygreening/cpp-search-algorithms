@@ -5,8 +5,7 @@
 //sorts the array from smallest element to largest element (ascending order)
 #include "myheaders.h"
 
-template<class T>
-void quicksort(T data[], int n) {
+void quicksort(long data[], int n){
     int i, max;
     if (n < 2)  //if the array has 1 or 0 elements, it's already sorted
         return;
