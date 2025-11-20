@@ -52,7 +52,7 @@ int main() {
 
 				begin_time = clock();   // start cpu timer
 
-				bubbleSort(data, sz);
+				bubbleSort(wData, sz);
 
 				end_time = clock();		// end cpu timer
 

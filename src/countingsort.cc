@@ -7,7 +7,7 @@
 
 #include "myheaders.h"
 
-void countingSort(long data[], const long n) {
+void countingSort(long data[], int n) {
 	long i;
 	long largest = data[0];
 	long *tmp = new long[n];
