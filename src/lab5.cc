@@ -18,11 +18,10 @@ using namespace std;
 
 int main() {
 	
-	int		choice, sz;
+	int		choice,sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
 	string  ifilename, ofilename;
-	long Data[20]={3,4,67,-89,78,100,-3,-67,83,1234,-49,677,54,89,100,666,-1000,78,22,-8};
 	
 	while (1) {
 
@@ -112,8 +111,10 @@ int main() {
 			case 4: //insertion sort
 
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-					//for (int i = 0; i < sz; i++){
-						//wData[i] = data[i];
+					for (int i = 0; i < sz; i++){
+						wData[i] = data[i];
+					}
+					cout << "list copied" << endl;
 					begin_time = clock();   // start cpu timer
 					InsertionSort(wData,sz);
 
@@ -206,6 +207,8 @@ int main() {
 						wData[i] = data[i];
 					}
 					begin_time = clock();   // start cpu timer
+					ShellSort(wData,sz);
+
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
@@ -216,9 +219,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Shell Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_ShellSort_out.txt";
 					writefile(wData, sz, ofilename);
 					
 					if (sz < 0)	 {
