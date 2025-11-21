@@ -5,8 +5,7 @@
 //sorts the array from smallest element to largest element (ascending order)
 #include "myheaders.h"
 
-template<class T>
-void selectionSort(T data[], int n) {
+void selectionSort(long data[], int n) {
 
 	//iterate though the array
 	for (int i = 0,j,least; i < n-1; i++) {
