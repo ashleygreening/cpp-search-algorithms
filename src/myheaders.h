@@ -10,6 +10,8 @@ int		readfile(string infilename, long data[]);
 int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 void	bubbleSort(long data[], int size);
+void 	heapSort(long data[],int size);
+void 	heapify(long data[],int start, int end);
 void    countingSort(long data[],int size);
 void	mergesort(long data[], long first, long last);
 void	merge(long d[], long first, long last);

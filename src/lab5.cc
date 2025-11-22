@@ -15,7 +15,6 @@
 
 using namespace std;
 
-
 int main() {
 
 	int		choice,sz;
@@ -47,19 +46,13 @@ int main() {
 					break;
 
 			case 2: //bubble sort
-
-                    // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function A here to sort the array 'wData''
-			        //  Note that 'wData' is of size 'sz' (see case 1).
 					bubbleSort(data,sz);
-
-
 
 					end_time = clock();		// end cpu timer
 
@@ -80,17 +73,12 @@ int main() {
 
 			case 3: //selection sort
 
-			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-					for (int i = 0; i < sz; i++){
+				for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
 					selectionSort(data, sz);
-
-
 
 					end_time = clock();		// end cpu timer
 
@@ -109,19 +97,12 @@ int main() {
 
 					break;
 			case 4: //insertion sort
-
-			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
+
 					begin_time = clock();   // start cpu timer
 					InsertionSort(wData,sz);
-
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-
-
-
 
 					end_time = clock();		// end cpu timer
 
@@ -139,27 +120,19 @@ int main() {
 					else cout << endl << "Output written to " << ofilename << endl;
 
 					break;
-			case 5: //counting sort
+			case 5: //heap sort
 
-			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-					countingSort(wData,sz);
-
-
-
-
-
+					heapSort(wData,sz);
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(D)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "HeapSort ran for " << cpu_time_used << " secs.";
 
 					ofilename = "lab5_D_out.txt";
 					writefile(wData, sz, ofilename);
@@ -173,18 +146,12 @@ int main() {
 
 					break;
 			case 6: //quicksort
-
-			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					for (int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
+
 					begin_time = clock();   // start cpu timer
-
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
 					quicksort(data, sz);
-
-
 
 					end_time = clock();		// end cpu timer
 
@@ -210,13 +177,6 @@ int main() {
 					}
 					begin_time = clock();   // start cpu timer
 					ShellSort(wData,sz);
-
-
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-
-
-
 
 					end_time = clock();		// end cpu timer
 
