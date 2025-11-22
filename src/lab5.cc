@@ -8,6 +8,7 @@
 //  stack space, expect a segmentation fault. In order to increase your
 //  stack space, run the following command from your terminal:
 //  ulimit -s 819200
+//Sabrina Damien, Ashley Greening,Leslie Merrill
 
 #include <iostream>
 #include <ctime>
