@@ -3,31 +3,37 @@
  *
  *  Created on: Nov 13, 2025
  *      Author: leslie-merrill
+ *      Shell sort is a more efficient modification of insertion sort that creates
+ *      progressively larger subarrays and sorts those so that once the final insertion sort runs, it is already mostly sorted making it more efficient
  */
 #include"myheaders.h"
 #include<iostream>
 using namespace std;
 
 void ShellSort(long array[],int size){
-	int h=0;
-	while(h<size){
-		h=(3*h)+1;
-	}
-	h=(h-1)/3;
+	//Calculates the first interval of elements to elements to be sorted by dividing the size by 4
+	int h=size/4;
+	//Has the algorithm run up until the array has every element sorted
 	while(h>0){
+		//Creates and load values into a subarray
 		long * subarray=new long[size/h];
 		for(int i=0;(size/h)>i;i++){
 			subarray[i]=array[i*h];
 		}
-			InsertionSort(subarray,(size/h));
+		//sorts the subarray using a standard Insertion Sort
+		InsertionSort(subarray,(size/h));
+		//Loads the sorted values back into their correct place
 		for(int i=0;(size/h)>i;i++){
 			array[i*h]=subarray[i];
+
 		}
-		h=(h-1)/3;
-		cout<<"Value of H is: "<<h<<"\n";
+		delete[] subarray;
+		h=h/2;
+
 
 
 	}
+
 	return;
 }
 

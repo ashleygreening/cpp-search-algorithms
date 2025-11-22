@@ -4,6 +4,8 @@
  *  Created on: Nov 11, 2025
  *      Author: Sabrina Damien
  */
+//I thought it was a memory allocation so I added the deletes to free the memory at the end but that didn't fix the problem
+//However I do think those still need to be added so I left them for now
 
 #include "myheaders.h"
 
@@ -32,8 +34,12 @@ void countingSort(long data[], int n) {
 		count[data[i]]--;
 	}
 
-	for (i = 0; i < n; i++) // transfer numbers from tmp[]
-		data[i] = tmp[i]; // to the original array;
+	for (i = 0; i < n; i++){// transfer numbers from tmp[]
+		data[i] = tmp[i];
+	}
+	delete[] tmp;
+	delete[] count;
+
 
 	return;
 }
