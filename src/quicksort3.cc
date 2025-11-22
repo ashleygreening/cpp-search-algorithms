@@ -1,4 +1,4 @@
-//quicksort with 3 parameters (use after first iteration)
+//quickkort with 3 parameters (use after first iteration)
 #include "myheaders.h"
 void quicksort3(long data[], int first, int last) {
 

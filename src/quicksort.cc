@@ -16,7 +16,7 @@ void quicksort(long data[], int n) {
 
     swap(data[max], data[n - 1]);
 
-    // sort the rest
+    //sort the rest
     quicksort3(data, 0, n - 2);
 }
 
