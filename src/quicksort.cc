@@ -1,21 +1,21 @@
-//quicksort
+//quicksort 2
 //Author: Ashley Greening
 //Created on 11/18/2025
 
 //sorts the array from smallest element to largest element (ascending order)
 #include "myheaders.h"
 
-void quicksort(long data[], int n) {
-    if (n < 2)
+void quicksort(long data[], int n){
+    int i, max;
+    if (n < 2)  //if the array has 1 or 0 elements, it's already sorted
         return;
 
-    int max = 0;
-    for (int i = 1; i < n; i++)
-        if (data[i] > data[max])
+    for (i = 1, max = 0; i < n; i++)  //find the largest element in the array
+        if (data[max] < data[i])  //if the current element is larger, update max
             max = i;
 
-    swap(data[max], data[n - 1]);
+    swap(data[n - 1], data[max]);  //put the largest element at the end of the array
 
-    //sort the rest
-    quicksort3(data, 0, n - 2);
+    //sort the rest of the array (excluding the last element, which is in its final position)
+    quicksort3(data, 0, n - 2);  //use recursion
 }
