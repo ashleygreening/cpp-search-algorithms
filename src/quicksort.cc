@@ -19,7 +19,3 @@ void quicksort(long data[], int n) {
     //sort the rest
     quicksort3(data, 0, n - 2);
 }
-
-
-
-
