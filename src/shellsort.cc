@@ -27,6 +27,7 @@ void ShellSort(long array[],int size){
 			array[i*h]=subarray[i];
 
 		}
+		delete[] subarray;
 		h=h/2;
 
 
