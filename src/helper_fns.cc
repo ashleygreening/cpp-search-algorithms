@@ -15,7 +15,7 @@ void	printmenu() {
 			cout << "  2: Sort using Bubble Sort" << endl;
 			cout << "  3: Sort using Selection Sort" << endl;
 			cout << "  4: Sort using Insertion Sort" << endl;
-			cout << "  5: Sort using Counting Sort" << endl;
+			cout << "  5: Sort using Heap Sort" << endl;
 			cout << "  6: Sort using Quicksort" << endl;
 			cout << "  7: Sort using Shell Sort" << endl;
 			cout << "  0: Exit program" << endl;

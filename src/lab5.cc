@@ -57,9 +57,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Bubble Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_A_out.txt";
+					ofilename = "lab5_BubbleSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -83,9 +83,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Selection Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_SelectionSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -134,7 +134,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "HeapSort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_D_out.txt";
+					ofilename = "lab5_HeapSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -156,9 +156,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(E)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Quick Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_E_out.txt";
+					ofilename = "lab5_QuickSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
