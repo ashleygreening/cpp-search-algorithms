@@ -21,7 +21,7 @@ void    ShellSort(long array[],int size);
 
 void	selectionSort(long data[], int n);
 void 	quicksort(long data[], int n);
-void 	Quicksort(long data[], int first, int last);
+void 	quicksort3(long data[], int first, int last);
 
 
 
