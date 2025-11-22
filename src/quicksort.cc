@@ -1,11 +1,11 @@
-//selection sort
+//quicksort
 //Author: Ashley Greening
 //Created on 11/18/2025
 
 //sorts the array from smallest element to largest element (ascending order)
 #include "myheaders.h"
 
-void Quicksort(long data[], int first, int last){ //function overloading
+void quicksort(long data[], int first, int last){ //function overloading
 	int lower = first + 1, upper = last;
 	swap(data[first], data[(first + last)/2]);
 	long bound = data[first];
@@ -19,10 +19,10 @@ void Quicksort(long data[], int first, int last){ //function overloading
 		else lower++;
 	}
 	swap(data[upper], data[first]);
-	if(first < (upper-1))
-		Quicksort(data, first, upper-1);
-	if((upper+1) < last)
-		Quicksort(data, (upper+1), last);
+	if(first < upper-1)
+		quicksort(data, first, upper-1);
+	if(upper+1 < last)
+		quicksort(data, upper+1, last);
 }
 
 
@@ -38,7 +38,7 @@ void quicksort(long data[], int n){
     swap(data[n - 1], data[max]);  //put the largest element at the end of the array
 
     //sort the rest of the array (excluding the last element, which is in its final position)
-    Quicksort(data, 0, n - 2);  //use recursion
+    quicksort(data, 0, n - 2);  //use recursion
 }
 
 
